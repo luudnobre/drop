@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Sticker Studio 🧲</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Converter para PDF/Word 📁</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/8.0.3/docx.min.js"></script>
 </head>
 <body>
-  <div class="dropzone" id="dropzone">
-    <h1>🧲 Sticker Studio</h1>
-    <p>Arraste até 20 imagens aqui</p>
+  <div class="container">
+    <h1>📎 Imagens → PDF / Word</h1>
+    <div id="dropzone" class="dropzone">
+      <p>Arraste imagens ou clique para selecionar</p>
+      <input type="file" id="imageInput" accept="image/*" multiple />
+    </div>
+    <div id="previewContainer"></div>
+    <div class="buttons">
+      <button id="exportPdf">📄 Exportar PDF</button>
+      <button id="exportWord">📝 Exportar Word</button>
+    </div>
   </div>
-  <div class="preview-container" id="previewContainer"></div>
   <script src="script.js"></script>
 </body>
 </html>
